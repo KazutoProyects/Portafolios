@@ -1,0 +1,749 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+html{
+    scroll-behavior: smooth;
+}
+/*ESTILOS SIMILARES */
+/* SECTION */
+section{
+    padding: 100px 0;
+}
+section .titulo{
+    position: relative;
+    text-align: center;
+    font-size: 35px;
+    font-weight: 500;
+    font-family: 'Ubuntu', sans-serif;
+    margin-bottom: 60px;
+    padding-bottom: 20px;
+} 
+section .titulo::before{
+    position: absolute;
+    content: "";
+    bottom: 0px;
+    left: 50%;
+    width: 262px;
+    height: 3px;
+    background: #111;
+    transform: translateX(-50%)
+}
+section .titulo::after{
+    position: absolute;
+    bottom: -11px;
+    left: 50%;
+    font-size: 20px;
+    color:#ff4b4b;
+    padding: 5px;
+    background: rgb(226, 226, 226);
+    transform: translateX(-50%)
+}
+.sobre-mi .sobre-mi-contenido, 
+.servicios .servicios-contenidos,
+.habilidades .habilidades-contenidos{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+.max-width{
+    max-width: 1300px;
+    padding: 0 80px;
+    margin: auto;
+}
+/* ESTILO NAVEGADOR */
+.navbar{
+    /*background: #FF6767;*/
+    position: fixed;
+    padding: 30px 0;
+    width: 100%;
+    font-family: 'Ubuntu', sans-serif;
+    transition: all 0.3s ease;
+    z-index: 999;
+}
+.navbar.sticky{
+    padding: 15px 0;
+    background: #ff4b4b;
+}
+.navbar .menu li{
+    list-style: none;
+    display: inline-block;
+}
+.navbar .logo a{
+    font-size: 35px;
+    font-weight: 600px;
+    color: #fff;
+}
+.navbar .logo a span{
+    color: #ff4b4b;
+    transition: all 0.3s ease;
+}
+.navbar.sticky .logo a span{
+    color: #fff;
+    
+}
+.navbar .menu li a {
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    margin-left: 20px;
+    transition: color 0.3s ease;
+}
+.navbar .menu li a:hover{
+    color: #ff4b4b;
+}
+.navbar.sticky .menu li a:hover{
+    color: #fff;
+}
+.navbar .max-width{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+/* MENÚ DE MOVIL (BTN)*/
+.menu-btn{
+    color:#fff;
+    font-size: 25px;
+    cursor:pointer;
+    display: none;
+}
+/* ESTILO INICIO */
+.inicio{
+    display: flex;
+    background: url("imagenes/inicio-fondo.jpg") no-repeat center;
+    height: 100vh;
+    background-size: cover;
+    background-attachment: fixed;
+    
+    color: #fff;
+    min-height: 500px;
+    font-family: 'Ubuntu', sans-serif;
+}
+.inicio .max-width{
+    margin: auto 0 auto 40px;
+}
+.inicio .inicio-contenido .texto1{
+    font-size: 27px;
+}
+.inicio .inicio-contenido .texto2{
+    font-size: 75px;
+    font-weight: 600;
+    margin-left: -3px;
+}
+.inicio .inicio-contenido .texto3{
+    font-size: 40px;
+    margin: 5px 0;
+}
+.inicio .inicio-contenido .texto3 span{
+    font-size: 40px;
+    margin: 5px 0;
+    color: #ff4b4b;
+}
+.inicio .inicio-contenido .botones li{
+    list-style: none;
+    display: inline-block;
+}
+.inicio .inicio-contenido .botones a{
+    display: inline-block;
+    background: #ff4b4b;
+    color: #fff;
+    font-size: 25px;
+    padding: 12px 36px;
+    border-radius: 8px;
+    border: 2px solid #ff4b4b;
+    transition: all 0.3s ease;
+    margin-right: 100px;
+    margin-top:50px;
+    
+}
+.inicio .inicio-contenido .botones a:hover{
+    background: #ffffff31;
+}
+/* ESTILO SOBRE MÍ */
+.sobre-mi{
+    background: rgb(226, 226, 226);
+    font-family: 'Poppins', sans-serif; 
+}
+
+.sobre-mi .titulo::after{
+    content: "¿Quién soy?";
+}
+
+.sobre-mi .sobre-mi-contenido .col-derecha{
+    width: 45%;
+}
+.sobre-mi .sobre-mi-contenido .col-derecha img{
+    height: 480px;
+    width: 400px;
+    object-fit: cover;
+    border: 5px solid #ff4b4b;
+    border-radius: 8px;
+    border-color:#ff4b4b;
+}
+.sobre-mi .sobre-mi-contenido .col-izquierda{
+    width: 55%;
+}
+.sobre-mi .sobre-mi-contenido .col-izquierda .texto{
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.sobre-mi .sobre-mi-contenido .col-izquierda .texto span{
+    color: #ff4b4b;
+}
+.sobre-mi .sobre-mi-contenido .col-izquierda p{
+    text-align: justify;
+}
+/* ESTILO SERVICIO */
+.servicios{
+    background: rgb(29, 29, 29);
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+}
+.servicios .titulo::before{
+    background:#fff;
+}
+.servicios .titulo::after{
+    content: "Que puedo aportar";
+    background:rgb(29, 29, 29);
+}
+
+.servicios .servicios-contenidos .flash-card{
+    width: calc(33% - 20px);
+    background: rgb(77, 77, 77);
+    text-align: center;
+    border-radius: 6px;
+    padding: 20px 25px;
+    cursor: pointer;
+    text-decoration:none;
+    color:#fff;
+    transition: all 0.3s ease;
+}
+.servicios .servicios-contenidos .flash-card:hover{
+    background: #ff4b4b;
+}
+.servicios .servicios-contenidos .flash-card i {
+    font-size: 50px;
+    color:#ff4b4b;
+    transition: all 0.3s ease;
+}
+.servicios .servicios-contenidos .flash-card:hover i{
+    color: #fff;
+}
+.servicios .servicios-contenidos .flash-card .texto{
+    font-size: 25px;
+    font-weight: 500;
+    margin: 10px 0 7px 0;
+}
+.servicios .servicios-contenidos .flash-card .box{
+    transition: all 0.3s ease;
+}
+.servicios .servicios-contenidos .flash-card:hover .box{
+    transform: scale(1.1);
+}
+/* ESTILO HABILIDADES */
+.habilidades{
+    background: rgb(226, 226, 226);
+    font-family: 'Poppins', sans-serif;
+}
+.habilidades .titulo::after{
+    content: "Sé usar...";
+    background:rgb(226, 226, 226);
+}
+.habilidades .habilidades-contenidos .col{
+    width: calc(50% - 30px);
+}
+.habilidades .habilidades-contenidos .izquierda .text{
+    font-size: 25px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+.habilidades .habilidades-contenidos .izquierda p{
+    text-align: justify;
+}
+
+.habilidades .habilidades-contenidos .derecha .barra{
+    margin: 20px 0;
+}
+.habilidades .habilidades-contenidos .derecha .barra:first-child{
+    margin-top:0px;
+}
+.habilidades .habilidades-contenidos .derecha .informacion{
+    margin-bottom: 5px;
+}
+.habilidades .habilidades-contenidos .derecha .informacion span{
+    font-size: 17px;
+    font-weight: 500;
+}
+.habilidades:hover .habilidades-contenidos .derecha .informacion span{
+    opacity: 0; 
+    animation: verLenguaje 0.5s 1.0s linear forwards;
+}
+@keyframes verLenguaje{
+    100%{
+        opacity: 1;
+    }
+}
+.habilidades .habilidades-contenidos .derecha span{
+    font-weight: 500; 
+    font-size: 18px;
+}
+.habilidades .habilidades-contenidos .derecha .linea{
+    position: relative;
+    height: 10px;
+    width: 100%;
+    background:rgb(151, 151, 151);
+    
+    position: relative;
+    border-radius: 10px;
+}
+.habilidades:hover .habilidades-contenidos .derecha .linea{
+    transform: scaleX(0);
+    transform-origin: left;
+    animation: animacion 1s cubic-bezier(1,0,0.5,1) forwards;
+}
+
+.habilidades .habilidades-contenidos .derecha .linea span{
+    height: 100%;
+    width: 80%;
+    background: #ff4b4b;
+    position: absolute;
+    border-radius: 10px;
+}
+.habilidades:hover .habilidades-contenidos .derecha .linea span{
+    transform: scaleX(0);
+    transform-origin: left;
+    animation: animacion 1s 1s cubic-bezier(1,0,0.5,1) forwards;
+}
+@keyframes animacion {
+    100%{
+        transform: scaleX(1);
+    }
+}
+.habilidades .habilidades-contenidos .derecha .linea span::before{
+    content:"";
+    position: absolute;
+    right:0;
+    top: -10px;
+    height: 0;
+    width: 0;
+    border:7px solid transparent;
+    border-bottom-width: 0px;
+    border-right-width: 0px;
+    border-top-color: #111;
+}
+.habilidades .habilidades-contenidos .derecha .linea span::after{
+    content:"75%";
+    position: absolute;
+    right:0;
+    top: -28px;
+    color: #fff;
+    font-size: 12px;
+    font-weight:500;
+    background: #111;
+    padding: 1px 8px;
+    border-radius: 3px;
+}
+.habilidades:hover .habilidades-contenidos .derecha .linea span::after{
+    opacity: 0; 
+    animation: verBocadillo 0.5s 1.5s linear forwards;
+}
+@keyframes verBocadillo{
+    100%{
+        opacity: 1;
+    }
+}
+
+.habilidades .habilidades-contenidos .derecha .html span::after{
+    content: "75%";
+}
+.habilidades .habilidades-contenidos .derecha .css span::after{
+    content: "60%";
+}
+.habilidades .habilidades-contenidos .derecha .js span::after{
+    content:"70%";
+}
+.habilidades .habilidades-contenidos .derecha .java span::after{
+    content:"80%";
+}
+.habilidades .habilidades-contenidos .derecha .python span::after{
+    content:"60%";
+}
+.habilidades .habilidades-contenidos .derecha .postgresql span::after{
+    content:"60%";
+}
+.habilidades .habilidades-contenidos .derecha .android span::after{
+    content:"50%";
+}
+
+
+.habilidades .habilidades-contenidos .derecha .html span{
+    width:75%;
+}
+.habilidades .habilidades-contenidos .derecha .css span{
+    width:60%;
+}
+.habilidades .habilidades-contenidos .derecha .js span{
+    width:70%;
+}
+.habilidades .habilidades-contenidos .derecha .java span{
+    width:80%;
+}
+.habilidades .habilidades-contenidos .derecha .python span{
+    width:60%;
+}
+.habilidades .habilidades-contenidos .derecha .postgresql span{
+    width:60%;
+}
+.habilidades .habilidades-contenidos .derecha .android span{
+    width:50%;
+}
+/* ESTILOS CONTACTO */
+.contacto{
+    background: rgb(29, 29, 29);
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+
+}
+.contacto .max-width{
+    position: relative;
+    min-height: 50vh;
+    padding: 50px 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.contacto .titulo::before{
+    background:#fff;
+}
+.contacto .titulo::after{
+    background: rgb(29, 29, 29);
+    content: " Escribame en: "; 
+}
+.contacto .contacto-contenido{
+    width: 100%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.contacto .contacto-contenido .informacion-contacto{
+    width:50%;
+    display:flex;
+    flex-direction: column;
+
+}
+.contacto .contacto-contenido .informacion-contacto .box{
+    position: relative;
+    padding: 20px 0;
+    display: flex;
+}
+.contacto .contacto-contenido .informacion-contacto .box .icono{
+    min-width: 60px;
+    height:60px;
+    background: rgb(226, 226, 226);
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-size:22px;
+}
+.contacto .contacto-contenido .informacion-contacto .box .texto{
+    display: flex;
+    margin-left: 20px;
+    font-size: 16px;
+    flex-direction: column;
+    font-weight: 300;
+}
+.contacto .contacto-contenido .informacion-contacto .box h3{
+    font-weight: 600;
+    color:#ff4b4b;
+}
+.contacto .contacto-contenido .informacion-contacto .box .icono i{
+    color: rgb(29, 29, 29);
+}
+.contacto .contacto-contenido .forma-contacto{
+    width: 40%;
+    padding:40px;
+    background:rgb(226, 226, 226);
+    border-radius: 8px;
+}
+.contacto .contacto-contenido .forma-contacto h2{
+    font-size: 30px;
+    color:#ff4b4b;
+    font-weight: 500;
+}
+.contacto .contacto-contenido .forma-contacto .inputBox{
+    position: relative;
+    width: 100%;
+    margin-top: 10px;
+}
+.contacto .contacto-contenido .forma-contacto .inputBox input, 
+.contacto .contacto-contenido .forma-contacto .inputBox textarea{
+    width:100%;
+    padding: 5px 0;
+    font-size:16px;
+    margin:  10px 0;
+    border: none;
+    border-bottom: 2px solid rgb(29, 29, 29);
+    background: rgb(197, 197, 197);
+    border-radius:4px;
+    resize:  none;
+}
+.contacto .contacto-contenido .forma-contacto .inputBox span{
+    position: absolute;
+    left:0;
+    padding: 5px 5px;
+    font-size:16px;
+    margin:  10px 0;
+    color:rgb(71, 71, 71);
+    pointer-events: none;
+    transition: 0.3s;
+}
+.contacto .contacto-contenido .forma-contacto .inputBox input:focus ~ span,
+.contacto .contacto-contenido .forma-contacto .inputBox input:valid ~ span,
+.contacto .contacto-contenido .forma-contacto .inputBox textarea:focus ~ span,
+.contacto .contacto-contenido .forma-contacto .inputBox textarea:valid ~ span{
+    color: #ff4b4b ;
+    font-size: 12px;
+    transform: translateY(-25px);
+}
+.contacto .contacto-contenido .forma-contacto .inputBox input[type="submit"]{
+    width: 100px;
+    background: #ff4b4b;
+    color:rgb(226, 226, 226);
+    border: 2px solid #ff4b4b;
+    cursor: pointer;
+    padding: 8px;
+    font-size: 18px;
+    transition: all 0.3s ease;
+}
+.contacto .contacto-contenido .forma-contacto .inputBox input[type="submit"]:hover{
+    color:#ff4b4b;
+    background: none;
+}
+/* ESTILO REDES SOCIALES */
+.redes{
+    background: rgb(226, 226, 226);
+    font-family: 'Poppins', sans-serif; 
+    transition: 0.3s;
+}
+.js-tilt-glare{
+    border-radius: 10px;
+}
+.redes .redes-contenido{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    min-height: 160px;
+}
+.redes .redes-contenido .redes-sociales{
+    position: relative;
+    display: flex;
+}
+.redes .redes-contenido .redes-sociales li{
+    list-style: none;
+}
+.redes .redes-contenido .redes-sociales li::before{
+    content: attr(data-text);
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    font-size: 5em;
+    color:#ccc;
+    pointer-events: none;
+    font-weight: 500;
+    transition:0.5s;
+    opacity:0;
+}
+.redes .redes-contenido .redes-sociales li:hover::before{
+    opacity: 0.3;
+    transform: translate(-50%,calc(-50% + 100px));
+}
+.redes .redes-contenido .redes-sociales li a {
+    position: relative;
+    display: inline-block;
+    width: 120px;
+    height: 120px;
+    background:rgb(255, 255, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #333;
+    border-radius:10px;
+    text-decoration: none;
+    margin: 20px;
+    font-size: 4em;
+    transform-style: preserve-3d;
+    perspective: 500px;
+    box-shadow: 0 25px 35px rgba(0,0,0, 0.1);
+    transition: background 0.3s;
+}
+.redes .redes-contenido .redes-sociales li .github:hover{
+    background: #504949;
+}
+.redes .redes-contenido .redes-sociales li .linkedin:hover{
+    background:#0E76A8;
+}
+
+.redes .redes-contenido .redes-sociales li a .fab{
+    transition: 0.25s;
+    pointer-events: none;
+}
+.redes .redes-contenido .redes-sociales li a:hover .fab{
+    color: #fff;
+    transform:scale(1.75) translateZ(40px);
+    
+}
+
+
+/* CAMBIO DE MEDIDAS */
+@media (max-width:1300px){
+    .inicio .max-width{
+        margin-left: 0px;
+    }
+}
+@media (max-width:1100px){
+    .sobre-mi .sobre-mi-contenido .col-derecha img{
+        height: 430px;
+        width: 350px;
+        
+    }
+}
+@media (max-width:1090px){
+    .max-width{
+        padding: 0 50px;
+    }
+}
+@media (max-width:1050px){
+    .max-width{
+        padding: 0 50px;
+    }
+    .menu-btn{
+        display: block;
+        z-index: 999;
+    }
+    .menu-btn i.active:before{
+        content: "\f00d";
+    }
+    .navbar.sticky .menu{
+        background:#ff4b4b;
+    }
+    .navbar .menu{
+        position:fixed;
+        height: 100vh;
+        width: 100%;
+        left:-100%;
+        top:0;
+        background: #2873b9;
+        text-align: center;
+        padding-top:80px;
+        transition: all 0.3s ease;
+    }
+    .navbar .menu.active{
+        left: 0;
+    }
+    .navbar .menu li{
+        display: block;
+    }
+    .navbar .menu li a{
+        display: inline-block;
+        margin: 20px 0;
+        font-size: 25px;
+    }
+    .inicio .inicio-contenido .texto2{
+        font-size: 60px;
+    }
+    .inicio .inicio-contenido .texto3{
+        font-size: 35px;
+    }
+    .inicio .inicio-contenido .botones a{
+        font-size: 23px;
+        padding: 10px 30px;
+        margin-right: 50px;
+    }
+    .max-width{
+        max-width: 800px;
+    }    
+    .sobre-mi .sobre-mi-contenido .col{
+        width: 100%;
+    }
+    .sobre-mi .sobre-mi-contenido .col-derecha{
+        display: flex;
+        justify-content: center;
+        margin: 0 auto 60px;
+    }
+    .sobre-mi .sobre-mi-contenido .col-izquierda{
+        flex: 100%;
+    }
+    .servicios .servicios-contenidos .flash-card{
+        width: calc(50% - 10px);
+        margin-bottom: 25px;
+    }
+    .contacto .contacto-contenido{
+        flex-direction: column;
+    }
+    .contacto .contacto-contenido .informacion-contacto{
+        margin-bottom:40px;
+    }
+    .contacto .contacto-contenido .informacion-contacto,
+    .contacto .contacto-contenido .forma-contacto{
+        width:100%;
+    }
+    
+}
+@media (max-width:860px){
+    .max-width{
+        padding: 0 25px;
+    }
+    .inicio .inicio-contenido .texto2{
+        font-size: 50px;
+    }
+    .inicio .inicio-contenido .texto3{
+        font-size: 35px;
+    }
+    .inicio .inicio-contenido .texto3 span{
+        font-size: 35px;
+    }
+    .inicio .inicio-contenido .botones a{
+        font-size: 20px;
+        padding: 9px 25px;
+        margin-right: 50px;
+    }    
+    .servicios .servicios-contenidos .flash-card{
+        width: 100%;
+    }
+    .habilidades .habilidades-contenidos .col{
+        width: 100%;
+        margin-bottom: 50px;
+    }
+}
+@media (max-width:595px){
+    .inicio .inicio-contenido .texto1{
+        font-size: 20px;
+    }
+    .inicio .inicio-contenido .texto2{
+        font-size: 35px;
+    }
+    .inicio .inicio-contenido .texto3{
+        font-size: 25px;
+    }
+    .inicio .inicio-contenido .texto3 span{
+        font-size: 25px;
+    }
+    .redes .redes-contenido .redes-sociales li::before{
+        font-size: 4em;
+    }
+}
+
