@@ -193,7 +193,7 @@ section .titulo::after{
     font-weight: 600;
     margin-bottom: 10px;
 }
-.sobre-mi .sobre-mi-contenido .col-izquierda .texto span{
+.sobre-mi .sobre-mi-contenido .col-izquierda .texto .escribir2, .typed-cursor{
     color: #ff4b4b;
 }
 .sobre-mi .sobre-mi-contenido .col-izquierda p{
@@ -707,6 +707,9 @@ section .titulo::after{
     .max-width{
         padding: 0 25px;
     }
+    .contacto .max-width{
+        padding: 0 25px;
+    }
     .inicio .inicio-contenido .texto2{
         font-size: 50px;
     }
@@ -744,6 +747,21 @@ section .titulo::after{
     }
     .redes .redes-contenido .redes-sociales li::before{
         font-size: 4em;
+    }
+    .sobre-mi .sobre-mi-contenido .col-izquierda .texto .texto-soy{
+        display: block;
+    }
+    .contacto .contacto-contenido .informacion-contacto .box .texto{
+        font-size: 13px;
+    }
+    .contacto .titulo::after{
+        font-size: 16px;
+    }
+    .contacto .titulo{
+        font-size: 30px;
+    }
+    .servicios .titulo::after{
+        font-size: 16px;
     }
 }
 
